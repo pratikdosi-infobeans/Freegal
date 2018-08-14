@@ -2,6 +2,7 @@ package pageviews;
 
 import java.net.MalformedURLException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,6 +35,9 @@ public class RolePage {
 	@FindBy(id = "com.coadvantage.coad:id/txtTimeline")
 	private WebElement timelinepage;
 	
+	@FindBy(id = "com.coadvantage.coad:id/btnSlideMenu")
+	private WebElement menuIcon;
+	
 	
 	public void selectdropdown() {
 		dropDown.click();  
@@ -61,8 +65,7 @@ public class RolePage {
 	}
 	
 public void verticalscroll(AndroidDriver<MobileElement> driver)  {
-	
-	  
+ 
 	    Dimension dim=driver.manage().window().getSize();
 	    int height = dim.getHeight();
 	    int width = dim.getWidth();
@@ -70,10 +73,21 @@ public void verticalscroll(AndroidDriver<MobileElement> driver)  {
 		int starty=(int)(height * 0.20);
 		int endy=(int)(height * 0.70);
 		int duration=500;
-		driver.swipe(x, starty, x, endy, duration);
-		
+		driver.swipe(x, starty, x, endy, duration);		
 		}
+
+    public void tapOnMenuIcon() {
+    	menuIcon.click();
+    }
+    
+	public void tapOnMenuOptions(String menuOption, WebDriver driver) {
+		WebElement option = driver.findElement(By.id("com.coadvantage.coad:id/"+menuOption));
+		option.click();
 	}
+    
+
+}
+ 
 	
 
 
