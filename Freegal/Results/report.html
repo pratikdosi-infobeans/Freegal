@@ -5,8 +5,8 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 3.0.2 (Python 2.7.14 on win32)" name="Generator">
-<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAJEBoACtnfgA5cYYAERsiAEx2lAAbKkQAcazBACZCVwAcM1cAK0ucAAMDBQAnQncASG+FABkoVQAyWmgA6f8SgvH/Ij99+GLyIinyJfn/Yi//KSLzUy9iZogpIld3/4JVVTkid7vyUjNVNVJEAGOZ6Z7pXwAABpmZkRiLAAAGiJZpmGAAAEEt3SXdxAAATC7o/u3EAAC8MRZpjasAAAY1VVVTYAAABKqqqqpAAAAADKqq4AAAAAAAv4sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMADAADgAwAA4AcAAOAHAADgBwAAwAcAAOAHAADgDwAA8A8AAPg/AAD+fwAA">
+<meta content="Robot Framework 3.0.4 (Python 2.7.14 on win32)" name="Generator">
+<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all" type="text/css">
 /* Generic and misc styles */
 body {
@@ -27,6 +27,11 @@ th, td {
 }
 br {
     mso-data-placement: same-cell; /* maintain line breaks in Excel */
+}
+hr {
+    background: #ccc;
+    height: 1px;
+    border: 0;
 }
 a, a:link, a:visited {
     text-decoration: none;
@@ -1545,20 +1550,30 @@ function stopPropagation(event) {
 <script type="text/javascript">
 storage = function () {
     var prefix = 'robot-framework-';
+    var storage;
     function init(user) {
         prefix += user + '-';
+        storage = getStorage();
+    }
+    function getStorage() {
+        // Use localStorage if it's accessible, normal object otherwise.
+        // Inspired by https://stackoverflow.com/questions/11214404
+        try {
+            localStorage.setItem(prefix, prefix);
+            localStorage.removeItem(prefix);
+            return localStorage;
+        } catch (exception) {
+            return {};
+        }
     }
     function get(name, defaultValue) {
-        if (!localStorage)
-            return defaultValue;
-        var value = localStorage[prefix + name];
+        var value = storage[prefix + name];
         if (typeof value === 'undefined')
             return defaultValue;
         return value;
     }
     function set(name, value) {
-        if (localStorage)
-            localStorage[prefix + name] = value;
+        storage[prefix + name] = value;
     }
     return {init: init, get: get, set: set};
 }();
@@ -1567,22 +1582,22 @@ storage = function () {
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,4,[],[0,0,144819],[],[[5,0,1,6,[7],[0,764,144039,8],[]]],[],[1,0,1,0]];
+window.output["suite"] = [1,2,3,4,[],[0,0,123242],[],[[5,0,1,6,[7],[0,970,122272,8],[]]],[],[1,0,1,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*Browse","*C:\\Mobile\\robot-scripts\\Freegal\\Tests\\Browse.robot","*../Tests/Browse.robot","*<p>This is the test site for Login into the app\x3c/p>","*TC_15_Browse Trending&gt;Top albums:validate user is able to addwhole playlist in streaming playlist","*<p>This test is to verify when shuffle is ON user stream the list any song get played\x3c/p>","*Smoke","eNq9kUFLA0EMhe/7K3IbvEytHoRCQQ8VkZ5s6UU8ZGfS3YHZSclkdrv/3q1oEQQ9KJ5CyEfeS962JVA6KvAeKFJHScEcD6jtcjbD5IWDt7kcDixq+xs7BN+Q2idyo4sku0DDGTvPImroaY0jF32+DcnTcWkuzcufk/Ov5DokQvl543Y6+uT+M2Mgt1yihxZ7gpoogcHaGaiLQkiwRzdVhQEzmMeSFe65JA8PNPHJ2Kq6i5mnf6J4Hk58iOQX1YZ6EoxvfRHKwM4VkdOoml/ADmOhlQjLAlbvGUR2qCxgHHc2hlpQxuAJs90LUYOxKzm4RfCz0G9INaQmG/DBQ2KFDtW1gGn8yDRP3q7+Ten6t0rar7mZAvxW5xUEtvux"]);
+window.output["strings"] = window.output["strings"].concat(["*","*MyMusic","*C:\\Mobile\\robot-scripts\\Freegal\\Tests\\MyMusic.robot","*../Tests/MyMusic.robot","*<p>This is the test site for Login into the app\x3c/p>","*TC_06_Validate user is able to verify the error message of playlist name on a streaming playlist popup","*<p>This test is to verfiy the my music playlist section\x3c/p>","*smoke","eNq9jrEOwjAMRPd8hbeKpQjYujF0gwmpu0ncECmJJccJ6t8jyg5DJcbT6e69CWOlUYRlgDFSoqwQ2aKyQGc59THcBWUJjrD0sxB5jKmWYIfg9trW6ZVKQU8duOAgs0JCtQ/AvAB9PktvzDkWBiUUx88MM4ZIbjA3aiQY11yFCrC1VeRdmcMOpk1+od1INWRffrgd/0Y6bSVpu7Dnql85L9MJquE="]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:02:24","fail":1,"label":"Critical Tests","pass":0},{"elapsed":"00:02:24","fail":1,"label":"All Tests","pass":0}],[{"elapsed":"00:02:24","fail":1,"label":"Smoke","pass":0}],[{"elapsed":"00:02:25","fail":1,"id":"s1","label":"Browse","name":"Browse","pass":0}]];
+window.output["stats"] = [[{"elapsed":"00:02:02","fail":1,"label":"Critical Tests","pass":0},{"elapsed":"00:02:02","fail":1,"label":"All Tests","pass":0}],[{"elapsed":"00:02:02","fail":1,"label":"smoke","pass":0}],[{"elapsed":"00:02:03","fail":1,"id":"s1","label":"MyMusic","name":"MyMusic","pass":0}]];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1534858320117;
+window.output["baseMillis"] = 1535535565202;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 144881;
+window.output["generated"] = 123320;
 </script>
 <script type="text/javascript">
 window.settings = {"background":{"fail":"#f66","nonCriticalFail":"#9e9","pass":"#9e9"},"logURL":"log.html","title":""};

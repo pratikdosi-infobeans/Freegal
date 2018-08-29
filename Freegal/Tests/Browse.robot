@@ -13,13 +13,13 @@ Test Teardown   Logout and close app
 
 #TC_01_Browse Trending>Top albums:Validate user is able to navigate on the browse section
 #    [Documentation]    This test is to verify that the user is able to navigates on browse section
-#    [Tags]
+#    [Tags] smoke
 #    validate user is on Browse tab
 
 
 #TC_02_Browse Trending>Top albums:Validate user is able to navigate on the list of top album and list displayed
 #    [Documentation]    This test is to verfiy that user navigates to the details screen of all albums
-#    [Tags]
+#    [Tags] smoke
 #    validate user is on Browse tab
 #    navigates to the detail screen of top album list
 #    check the top album list displayed
@@ -27,7 +27,7 @@ Test Teardown   Logout and close app
 #
 #TC_03_Browse Trending>Top albums:Validate user is able to navigate to the album list and album details screen
 #    [Documentation]    This test is to verfiy the section available
-#    [Tags]
+#    [Tags] smoke
 #    validate user is on Browse tab
 #    navigates to the detail screen of top album list
 #    navigates to the detail screen of any album
@@ -36,7 +36,7 @@ Test Teardown   Logout and close app
 
 #TC_04_Browse Trending>Top albums:Validate user is able to navigate to the album list and album details screen
 #    [Documentation]    This test is to verfiy the section available
-#    [Tags]
+#    [Tags]     smoke
 #    validate user is on Browse tab
 #    navigates to the detail screen of top album list
 #    get the text of trending playlist
@@ -48,7 +48,7 @@ Test Teardown   Logout and close app
 
 #TC_05_Browse Trending>Top albums:Validate user is able to add a song in wishlist and validate the same song added on wishlist screen
 #    [Documentation]    This test is to verfiy the section available
-#    [Tags]
+#    [Tags]     smoke
 #    validate user is on Browse tab
 #    navigates to the detail screen of top album list
 #    navigates to the detail screen of any album
@@ -104,11 +104,11 @@ Test Teardown   Logout and close app
 #    sleep   5s
 #    scroll the list
 #    select more option of the second song in playlist
-#    read the name of the adding song
+#    get the name of the adding song
 #    tap on add to streaming playlist button
 #    create a new playlist
-#    name your playlist from home
-#    tap on create playlist button at home
+#    name your streaming playlist
+#    tap on create playlist button at popup
 #    Verify the message of song added
 #    tap on Ok button of song added/remove
 #    navigates to the back screen
@@ -140,11 +140,11 @@ Test Teardown   Logout and close app
 #    sleep   5s
 #    scroll the list
 #    select more option of the second song in playlist
-#    read the name of the adding song
+#    get the name of the adding song
 #    tap on add to streaming playlist button
 #    create a new playlist
-#    name your playlist from home
-#    tap on create playlist button at home
+#    name your streaming playlist
+#    tap on create playlist button at popup
 #    Verify the message of song added
 #    tap on view playlist button
 #    validate user lands to the playlist screen
@@ -199,7 +199,7 @@ Test Teardown   Logout and close app
 #    navigates to the back screen
 #    navigates to the back screen
 
-TC_15_Browse Trending>Top albums:validate user is able to addwhole playlist in streaming playlist
+TC_15_Browse Trending>Top albums:validate user is able to add whole playlist in streaming playlist
     [Documentation]    This test is to verify when shuffle is ON user stream the list any song get played
     [Tags]  Smoke
     validate user is on Browse tab
@@ -208,16 +208,19 @@ TC_15_Browse Trending>Top albums:validate user is able to addwhole playlist in s
     sleep   5s
     scroll the list
     now get the name of top three song
+    navigates to the back screen
     select more option of the second song in playlist
     tap on add to streaming playlist button
     create a new playlist
-    name your playlist from home
-    tap on create playlist button at home
+    name your streaming playlist
+    tap on create playlist button at popup
     Verify the message of song added
     tap on view playlist button
     validate user lands to the playlist screen
     open the first streaming playlist
-    check the text of added song and compare with it
+    scroll the list
+    sleep   2s
+    check the text of first three added song and compare with it
     navigates to the back screen
 
 

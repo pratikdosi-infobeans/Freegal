@@ -6,6 +6,9 @@ Library     robot.libraries.DateTime
 
 *** Variables ***
 ${NAMEOFPLAYLIST}
+${FIRST_SONGS_NAME}
+${SECOND_SONGS_NAME}
+${THIRD_SONGS_NAME}
 
 *** Keywords ***
 
@@ -39,3 +42,19 @@ now compare the name of playlist on detail screen
 
 
 now get the name of top three song
+    ${FIRST_SONGS_NAME}         get element attribute       xpath=//android.widget.RelativeLayout[@index='3']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']         text
+    log to console          ${FIRST_SONGS_NAME}
+    set global variable     ${FIRST_SONGS_NAME}
+    ${SECOND_SONGS_NAME}         get element attribute       xpath=//android.widget.RelativeLayout[@index='3']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']         text
+    log to console          ${SECOND_SONGS_NAME}
+    set global variable     ${SECOND_SONGS_NAME}
+    ${THIRD_SONGS_NAME}         get element attribute       xpath=//android.widget.RelativeLayout[@index='3']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.RelativeLayout[@index='2']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']         text
+    log to console          ${THIRD_SONGS_NAME}
+    set global variable     ${THIRD_SONGS_NAME}
+
+
+check the text of first three added song and compare with it
+    sleep   3s
+    element text should be      xpath=//android.widget.RelativeLayout[@index='3']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']        ${FIRST_SONGS_NAME}
+    element text should be      xpath=//android.widget.RelativeLayout[@index='3']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']        ${SECOND_SONGS_NAME}
+    element text should be      xpath=//android.widget.RelativeLayout[@index='3']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.RelativeLayout[@index='2']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']        ${THIRD_SONGS_NAME}

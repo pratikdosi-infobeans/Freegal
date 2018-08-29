@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180821 19:02:00.117" generator="Robot 3.0.2 (Python 2.7.14 on win32)">
-<suite source="C:\Mobile\robot-scripts\Freegal\Tests\Browse.robot" id="s1" name="Browse">
-<test id="s1-t1" name="TC_15_Browse Trending&gt;Top albums:validate user is able to addwhole playlist in streaming playlist">
+<robot generated="20180829 15:09:25.187" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
+<suite source="C:\Mobile\robot-scripts\Freegal\Tests\MyMusic.robot" id="s1" name="MyMusic">
+<test id="s1-t1" name="TC_06_Validate user is able to verify the error message of playlist name on a streaming playlist popup">
 <kw type="setup" name="launch and login in app" library="Common">
 <kw name="launch application1" library="Common">
 <kw name="Open Application" library="AppiumLibrary">
@@ -15,9 +15,9 @@
 <arg>app=com.libraryideas.freegalmusic</arg>
 <arg>appActivity=com.libraryideas.freegalmusic.activities.SplashActivity</arg>
 </arguments>
-<status status="PASS" endtime="20180821 19:02:08.269" starttime="20180821 19:02:00.881"></status>
+<status status="PASS" endtime="20180829 15:09:33.927" starttime="20180829 15:09:26.172"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:02:08.285" starttime="20180821 19:02:00.881"></status>
+<status status="PASS" endtime="20180829 15:09:33.927" starttime="20180829 15:09:26.172"></status>
 </kw>
 <kw name="Navigates to the location screen" library="LoginScreen">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
@@ -26,9 +26,9 @@
 <arg>com.libraryideas.freegalmusic:id/ivFreegalIcon</arg>
 <arg>30s</arg>
 </arguments>
-<status status="PASS" endtime="20180821 19:02:14.814" starttime="20180821 19:02:08.285"></status>
+<status status="PASS" endtime="20180829 15:09:40.368" starttime="20180829 15:09:33.927"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:02:14.814" starttime="20180821 19:02:08.285"></status>
+<status status="PASS" endtime="20180829 15:09:40.368" starttime="20180829 15:09:33.927"></status>
 </kw>
 <kw name="Enter the location ID" library="LoginScreen">
 <kw name="Click Element" library="AppiumLibrary">
@@ -36,8 +36,8 @@
 <arguments>
 <arg>com.libraryideas.freegalmusic:id/edtLocation</arg>
 </arguments>
-<msg timestamp="20180821 19:02:14.814" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/edtLocation'.</msg>
-<status status="PASS" endtime="20180821 19:02:15.033" starttime="20180821 19:02:14.814"></status>
+<msg timestamp="20180829 15:09:40.384" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/edtLocation'.</msg>
+<status status="PASS" endtime="20180829 15:09:40.546" starttime="20180829 15:09:40.368"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -45,10 +45,10 @@
 <arg>com.libraryideas.freegalmusic:id/edtLocation</arg>
 <arg>${location _ID}</arg>
 </arguments>
-<msg timestamp="20180821 19:02:15.033" level="INFO">Typing text '37406' into text field 'com.libraryideas.freegalmusic:id/edtLocation'</msg>
-<status status="PASS" endtime="20180821 19:02:34.036" starttime="20180821 19:02:15.033"></status>
+<msg timestamp="20180829 15:09:40.548" level="INFO">Typing text '37406' into text field 'com.libraryideas.freegalmusic:id/edtLocation'</msg>
+<status status="PASS" endtime="20180829 15:09:59.655" starttime="20180829 15:09:40.547"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:02:34.036" starttime="20180821 19:02:14.814"></status>
+<status status="PASS" endtime="20180829 15:09:59.655" starttime="20180829 15:09:40.368"></status>
 </kw>
 <kw name="Tap on the Continue button" library="LoginScreen">
 <kw name="Click Element" library="AppiumLibrary">
@@ -56,10 +56,10 @@
 <arguments>
 <arg>com.libraryideas.freegalmusic:id/btnContinue</arg>
 </arguments>
-<msg timestamp="20180821 19:02:34.036" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/btnContinue'.</msg>
-<status status="PASS" endtime="20180821 19:02:34.870" starttime="20180821 19:02:34.036"></status>
+<msg timestamp="20180829 15:09:59.655" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/btnContinue'.</msg>
+<status status="PASS" endtime="20180829 15:10:00.452" starttime="20180829 15:09:59.655"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:02:34.870" starttime="20180821 19:02:34.036"></status>
+<status status="PASS" endtime="20180829 15:10:00.452" starttime="20180829 15:09:59.655"></status>
 </kw>
 <kw name="Select &quot;m68&quot;" library="LoginScreen">
 <kw name="Sleep" library="BuiltIn">
@@ -67,18 +67,18 @@
 <arguments>
 <arg>7s</arg>
 </arguments>
-<msg timestamp="20180821 19:02:41.874" level="INFO">Slept 7 seconds</msg>
-<status status="PASS" endtime="20180821 19:02:41.874" starttime="20180821 19:02:34.870"></status>
+<msg timestamp="20180829 15:10:07.459" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" endtime="20180829 15:10:07.459" starttime="20180829 15:10:00.452"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//android.widget.TextView[@text= "m68 Interactive"]</arg>
 </arguments>
-<msg timestamp="20180821 19:02:41.874" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text= "m68 Interactive"]'.</msg>
-<status status="PASS" endtime="20180821 19:02:42.364" starttime="20180821 19:02:41.874"></status>
+<msg timestamp="20180829 15:10:07.459" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text= "m68 Interactive"]'.</msg>
+<status status="PASS" endtime="20180829 15:10:08.036" starttime="20180829 15:10:07.459"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:02:42.364" starttime="20180821 19:02:34.870"></status>
+<status status="PASS" endtime="20180829 15:10:08.036" starttime="20180829 15:10:00.452"></status>
 </kw>
 <kw name="Enter login credentials for login" library="BasicApp">
 <kw name="Enter email Id" library="LoginScreen">
@@ -87,8 +87,8 @@
 <arguments>
 <arg>com.libraryideas.freegalmusic:id/edtUserId</arg>
 </arguments>
-<msg timestamp="20180821 19:02:42.365" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/edtUserId'.</msg>
-<status status="PASS" endtime="20180821 19:02:43.498" starttime="20180821 19:02:42.364"></status>
+<msg timestamp="20180829 15:10:08.036" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/edtUserId'.</msg>
+<status status="PASS" endtime="20180829 15:10:09.183" starttime="20180829 15:10:08.036"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -96,14 +96,14 @@
 <arg>com.libraryideas.freegalmusic:id/edtUserId</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20180821 19:02:43.498" level="INFO">Typing text 'mukesh.mansane@infobeans.com' into text field 'com.libraryideas.freegalmusic:id/edtUserId'</msg>
-<status status="PASS" endtime="20180821 19:02:49.461" starttime="20180821 19:02:43.498"></status>
+<msg timestamp="20180829 15:10:09.183" level="INFO">Typing text 'mukesh.mansane@infobeans.com' into text field 'com.libraryideas.freegalmusic:id/edtUserId'</msg>
+<status status="PASS" endtime="20180829 15:10:15.679" starttime="20180829 15:10:09.183"></status>
 </kw>
 <kw name="Hide Keyboard" library="AppiumLibrary">
 <doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press</doc>
-<status status="PASS" endtime="20180821 19:02:50.057" starttime="20180821 19:02:49.461"></status>
+<status status="PASS" endtime="20180829 15:10:16.321" starttime="20180829 15:10:15.679"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:02:50.058" starttime="20180821 19:02:42.364"></status>
+<status status="PASS" endtime="20180829 15:10:16.321" starttime="20180829 15:10:08.036"></status>
 </kw>
 <kw name="Enter password" library="LoginScreen">
 <kw name="Click Element" library="AppiumLibrary">
@@ -111,8 +111,8 @@
 <arguments>
 <arg>com.libraryideas.freegalmusic:id/edtPin</arg>
 </arguments>
-<msg timestamp="20180821 19:02:50.059" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/edtPin'.</msg>
-<status status="PASS" endtime="20180821 19:02:50.914" starttime="20180821 19:02:50.059"></status>
+<msg timestamp="20180829 15:10:16.321" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/edtPin'.</msg>
+<status status="PASS" endtime="20180829 15:10:17.267" starttime="20180829 15:10:16.321"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -120,14 +120,14 @@
 <arg>com.libraryideas.freegalmusic:id/edtPin</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20180821 19:02:50.914" level="INFO">Typing text 'infobeans' into text field 'com.libraryideas.freegalmusic:id/edtPin'</msg>
-<status status="PASS" endtime="20180821 19:02:56.871" starttime="20180821 19:02:50.914"></status>
+<msg timestamp="20180829 15:10:17.282" level="INFO">Typing text 'infobeans' into text field 'com.libraryideas.freegalmusic:id/edtPin'</msg>
+<status status="PASS" endtime="20180829 15:10:23.140" starttime="20180829 15:10:17.267"></status>
 </kw>
 <kw name="Hide Keyboard" library="AppiumLibrary">
 <doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press</doc>
-<status status="PASS" endtime="20180821 19:02:57.433" starttime="20180821 19:02:56.871"></status>
+<status status="PASS" endtime="20180829 15:10:23.683" starttime="20180829 15:10:23.140"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:02:57.433" starttime="20180821 19:02:50.058"></status>
+<status status="PASS" endtime="20180829 15:10:23.683" starttime="20180829 15:10:16.321"></status>
 </kw>
 <kw name="Tap on login button" library="LoginScreen">
 <kw name="Click Element" library="AppiumLibrary">
@@ -135,16 +135,16 @@
 <arguments>
 <arg>com.libraryideas.freegalmusic:id/btnLogin</arg>
 </arguments>
-<msg timestamp="20180821 19:02:57.433" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/btnLogin'.</msg>
-<status status="PASS" endtime="20180821 19:02:58.448" starttime="20180821 19:02:57.433"></status>
+<msg timestamp="20180829 15:10:23.699" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/btnLogin'.</msg>
+<status status="PASS" endtime="20180829 15:10:24.734" starttime="20180829 15:10:23.699"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<msg timestamp="20180821 19:03:08.448" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" endtime="20180821 19:03:08.448" starttime="20180821 19:02:58.448"></status>
+<msg timestamp="20180829 15:10:34.748" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20180829 15:10:34.748" starttime="20180829 15:10:24.734"></status>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
@@ -162,16 +162,16 @@
 </arguments>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20180821 19:03:11.702" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20180821 19:03:11.702" starttime="20180821 19:03:09.073"></status>
+<msg timestamp="20180829 15:10:38.372" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180829 15:10:38.372" starttime="20180829 15:10:35.323"></status>
 </kw>
-<msg timestamp="20180821 19:03:11.702" level="FAIL">Page should have contained element 'com.libraryideas.freegalmusic:id/parentPanel' but did not</msg>
-<status status="FAIL" endtime="20180821 19:03:11.702" starttime="20180821 19:03:08.448"></status>
+<msg timestamp="20180829 15:10:38.372" level="FAIL">Page should have contained element 'com.libraryideas.freegalmusic:id/parentPanel' but did not</msg>
+<status status="FAIL" endtime="20180829 15:10:38.372" starttime="20180829 15:10:34.748"></status>
 </kw>
-<status status="FAIL" endtime="20180821 19:03:11.702" starttime="20180821 19:03:08.448"></status>
+<status status="FAIL" endtime="20180829 15:10:38.372" starttime="20180829 15:10:34.748"></status>
 </kw>
-<msg timestamp="20180821 19:03:11.702" level="INFO">${LimitMetpopup} = False</msg>
-<status status="PASS" endtime="20180821 19:03:11.702" starttime="20180821 19:03:08.448"></status>
+<msg timestamp="20180829 15:10:38.372" level="INFO">${LimitMetpopup} = False</msg>
+<status status="PASS" endtime="20180829 15:10:38.372" starttime="20180829 15:10:34.748"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -179,7 +179,7 @@
 <arg>'${LimitMetpopup}'=='True'</arg>
 <arg>Tap on OK button of Limetmet popup</arg>
 </arguments>
-<status status="PASS" endtime="20180821 19:03:11.702" starttime="20180821 19:03:11.702"></status>
+<status status="PASS" endtime="20180829 15:10:38.372" starttime="20180829 15:10:38.372"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
@@ -187,266 +187,124 @@
 <arg>xpath=//android.widget.TextView[@text='Home']</arg>
 <arg>30s</arg>
 </arguments>
-<status status="PASS" endtime="20180821 19:03:12.061" starttime="20180821 19:03:11.702"></status>
+<status status="PASS" endtime="20180829 15:10:38.760" starttime="20180829 15:10:38.372"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:03:12.061" starttime="20180821 19:02:57.433"></status>
+<status status="PASS" endtime="20180829 15:10:38.760" starttime="20180829 15:10:23.683"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:03:12.061" starttime="20180821 19:02:42.364"></status>
+<status status="PASS" endtime="20180829 15:10:38.760" starttime="20180829 15:10:08.036"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:03:12.061" starttime="20180821 19:02:00.881"></status>
+<status status="PASS" endtime="20180829 15:10:38.760" starttime="20180829 15:09:26.172"></status>
 </kw>
-<kw name="validate user is on Browse tab" library="BrowseScreen">
+<kw name="navigates to the my music screen" library="MyMusicScreen">
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>5s</arg>
+<arg>3s</arg>
 </arguments>
-<msg timestamp="20180821 19:03:17.061" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180821 19:03:17.061" starttime="20180821 19:03:12.061"></status>
+<msg timestamp="20180829 15:10:41.765" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180829 15:10:41.765" starttime="20180829 15:10:38.760"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//android.widget.TextView[@text='Browse']</arg>
+<arg>xpath=//android.widget.TextView[@text='My Music']</arg>
 </arguments>
-<msg timestamp="20180821 19:03:17.062" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Browse']'.</msg>
-<status status="PASS" endtime="20180821 19:03:17.524" starttime="20180821 19:03:17.061"></status>
+<msg timestamp="20180829 15:10:41.765" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='My Music']'.</msg>
+<status status="PASS" endtime="20180829 15:10:42.217" starttime="20180829 15:10:41.765"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//android.widget.TextView[@text='Browse']</arg>
-<arg>35s</arg>
+<arg>xpath=//android.widget.TextView[@text='My Music']</arg>
 </arguments>
-<status status="PASS" endtime="20180821 19:03:21.242" starttime="20180821 19:03:17.524"></status>
+<status status="PASS" endtime="20180829 15:10:43.235" starttime="20180829 15:10:42.217"></status>
+</kw>
+<status status="PASS" endtime="20180829 15:10:43.235" starttime="20180829 15:10:38.760"></status>
+</kw>
+<kw name="navigates to the Mymusic&gt; playlist section" library="MyMusicScreen">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='Playlists']</arg>
+</arguments>
+<msg timestamp="20180829 15:10:43.235" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Playlists']'.</msg>
+<status status="PASS" endtime="20180829 15:10:44.777" starttime="20180829 15:10:43.235"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='Playlists']</arg>
+</arguments>
+<status status="PASS" endtime="20180829 15:10:46.001" starttime="20180829 15:10:44.777"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>3s</arg>
+<arg>10s</arg>
 </arguments>
-<msg timestamp="20180821 19:03:24.244" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20180821 19:03:24.244" starttime="20180821 19:03:21.242"></status>
+<msg timestamp="20180829 15:10:56.008" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20180829 15:10:56.008" starttime="20180829 15:10:46.001"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:03:24.244" starttime="20180821 19:03:12.061"></status>
+<status status="PASS" endtime="20180829 15:10:56.008" starttime="20180829 15:10:43.235"></status>
 </kw>
-<kw name="navigates to the detail screen of top album list" library="BrowseScreen">
+<kw name="tap on the create playlist button" library="MyMusicScreen">
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//android.widget.ScrollView[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.TextView[@index='4']</arg>
+<arg>com.libraryideas.freegalmusic:id/tvCreatePlaylist</arg>
 </arguments>
-<msg timestamp="20180821 19:03:24.244" level="INFO">Clicking element 'xpath=//android.widget.ScrollView[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.TextView[@index='4']'.</msg>
-<status status="PASS" endtime="20180821 19:03:26.155" starttime="20180821 19:03:24.244"></status>
+<msg timestamp="20180829 15:10:56.008" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/tvCreatePlaylist'.</msg>
+<status status="PASS" endtime="20180829 15:10:56.507" starttime="20180829 15:10:56.008"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3s</arg>
-</arguments>
-<msg timestamp="20180821 19:03:29.162" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20180821 19:03:29.162" starttime="20180821 19:03:26.155"></status>
+<status status="PASS" endtime="20180829 15:10:56.507" starttime="20180829 15:10:56.008"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:03:29.162" starttime="20180821 19:03:24.244"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>5s</arg>
-</arguments>
-<msg timestamp="20180821 19:03:34.162" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180821 19:03:34.162" starttime="20180821 19:03:29.162"></status>
-</kw>
-<kw name="select more option of the second song in playlist" library="HomeScreen">
+<kw name="tap on the my streaming playlist button" library="MyMusicScreen">
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='1']/android.widget.RelativeLayout[@index='0']/android.widget.LinearLayout[@index='2']</arg>
+<arg>com.libraryideas.freegalmusic:id/tvStreamingPlaylist</arg>
 </arguments>
-<msg timestamp="20180821 19:03:34.162" level="INFO">Clicking element 'xpath=//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='1']/android.widget.RelativeLayout[@index='0']/android.widget.LinearLayout[@index='2']'.</msg>
-<status status="PASS" endtime="20180821 19:03:34.726" starttime="20180821 19:03:34.162"></status>
-</kw>
-<status status="PASS" endtime="20180821 19:03:34.726" starttime="20180821 19:03:34.162"></status>
-</kw>
-<kw name="tap on add to streaming playlist button" library="HomeScreen">
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>com.libraryideas.freegalmusic:id/tvAddtoPlaylist</arg>
-</arguments>
-<msg timestamp="20180821 19:03:34.741" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/tvAddtoPlaylist'.</msg>
-<status status="PASS" endtime="20180821 19:03:35.694" starttime="20180821 19:03:34.741"></status>
+<msg timestamp="20180829 15:10:56.507" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/tvStreamingPlaylist'.</msg>
+<status status="PASS" endtime="20180829 15:10:57.550" starttime="20180829 15:10:56.507"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20180821 19:03:37.701" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20180821 19:03:37.701" starttime="20180821 19:03:35.694"></status>
+<msg timestamp="20180829 15:10:59.558" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180829 15:10:59.558" starttime="20180829 15:10:57.550"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:03:37.701" starttime="20180821 19:03:34.741"></status>
+<status status="PASS" endtime="20180829 15:10:59.558" starttime="20180829 15:10:56.507"></status>
 </kw>
-<kw name="create a new playlist" library="HomeScreen">
+<kw name="tap on the create playlist button" library="MyMusicScreen">
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>com.libraryideas.freegalmusic:id/tvCreateNewPlaylist</arg>
+<arg>com.libraryideas.freegalmusic:id/tvCreatePlaylist</arg>
 </arguments>
-<msg timestamp="20180821 19:03:37.701" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/tvCreateNewPlaylist'.</msg>
-<status status="PASS" endtime="20180821 19:03:38.298" starttime="20180821 19:03:37.701"></status>
+<msg timestamp="20180829 15:10:59.558" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/tvCreatePlaylist'.</msg>
+<status status="PASS" endtime="20180829 15:11:02.967" starttime="20180829 15:10:59.558"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:03:38.298" starttime="20180821 19:03:37.701"></status>
+<status status="PASS" endtime="20180829 15:11:02.967" starttime="20180829 15:10:59.558"></status>
 </kw>
-<kw name="name your playlist from home" library="BasicApp">
-<kw name="name your playlist field" library="MyMusicScreen">
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>com.libraryideas.freegalmusic:id/edtPlaylistName</arg>
-</arguments>
-<msg timestamp="20180821 19:03:38.298" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/edtPlaylistName'.</msg>
-<status status="PASS" endtime="20180821 19:03:42.128" starttime="20180821 19:03:38.298"></status>
-</kw>
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>7</arg>
-<arg>${Letters}</arg>
-</arguments>
-<assign>
-<var>${Random_playlistname}</var>
-</assign>
-<msg timestamp="20180821 19:03:42.128" level="INFO">${Random_playlistname} = bdjhkej</msg>
-<status status="PASS" endtime="20180821 19:03:42.128" starttime="20180821 19:03:42.128"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${Random_playlistname}</arg>
-</arguments>
-<msg timestamp="20180821 19:03:42.128" level="INFO">${Random_playlistname} = bdjhkej</msg>
-<status status="PASS" endtime="20180821 19:03:42.128" starttime="20180821 19:03:42.128"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>com.libraryideas.freegalmusic:id/edtPlaylistName</arg>
-<arg>${Random_playlistname}</arg>
-</arguments>
-<msg timestamp="20180821 19:03:42.128" level="INFO">Typing text 'bdjhkej' into text field 'com.libraryideas.freegalmusic:id/edtPlaylistName'</msg>
-<status status="PASS" endtime="20180821 19:03:47.523" starttime="20180821 19:03:42.128"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${Random_playlistname}</arg>
-</arguments>
-<status status="PASS" endtime="20180821 19:03:47.523" starttime="20180821 19:03:47.523"></status>
-</kw>
-<status status="PASS" endtime="20180821 19:03:47.523" starttime="20180821 19:03:38.298"></status>
-</kw>
-<status status="PASS" endtime="20180821 19:03:47.523" starttime="20180821 19:03:38.298"></status>
-</kw>
-<kw name="tap on create playlist button at home" library="BasicApp">
-<kw name="tap on the create button" library="MyMusicScreen">
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>com.libraryideas.freegalmusic:id/tvCreate</arg>
-</arguments>
-<msg timestamp="20180821 19:03:47.538" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/tvCreate'.</msg>
-<status status="PASS" endtime="20180821 19:03:48.495" starttime="20180821 19:03:47.538"></status>
-</kw>
-<status status="PASS" endtime="20180821 19:03:48.495" starttime="20180821 19:03:47.538"></status>
-</kw>
-<status status="PASS" endtime="20180821 19:03:48.495" starttime="20180821 19:03:47.523"></status>
-</kw>
-<kw name="Verify the message of song added" library="HomeScreen">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>4s</arg>
-</arguments>
-<msg timestamp="20180821 19:03:52.512" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" endtime="20180821 19:03:52.512" starttime="20180821 19:03:48.511"></status>
-</kw>
+<kw name="verify the error message" library="MyMusicScreen">
 <kw name="Element Text Should Be" library="AppiumLibrary">
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
 <arguments>
-<arg>xpath=//android.widget.TextView[@text='Song has been added to playlist']</arg>
-<arg>Song has been added to playlist</arg>
+<arg>com.libraryideas.freegalmusic:id/tvErrorMessage</arg>
+<arg>*Name cannot be empty.</arg>
 </arguments>
-<msg timestamp="20180821 19:03:52.512" level="INFO">Verifying element 'xpath=//android.widget.TextView[@text='Song has been added to playlist']' contains exactly text 'Song has been added to playlist'.</msg>
-<status status="PASS" endtime="20180821 19:03:52.652" starttime="20180821 19:03:52.512"></status>
-</kw>
-<status status="PASS" endtime="20180821 19:03:52.652" starttime="20180821 19:03:48.511"></status>
-</kw>
-<kw name="tap on view playlist button" library="HomeScreen">
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>com.libraryideas.freegalmusic:id/tvViewWishlist</arg>
-</arguments>
-<msg timestamp="20180821 19:03:52.652" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/tvViewWishlist'.</msg>
-<status status="PASS" endtime="20180821 19:03:53.183" starttime="20180821 19:03:52.652"></status>
-</kw>
-<status status="PASS" endtime="20180821 19:03:53.183" starttime="20180821 19:03:52.652"></status>
-</kw>
-<kw name="validate user lands to the playlist screen" library="HomeScreen">
-<kw name="Element Should Be Visible" library="AppiumLibrary">
-<doc>Verifies that element identified with locator is visible.</doc>
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='Playlists']</arg>
-</arguments>
-<status status="PASS" endtime="20180821 19:03:53.964" starttime="20180821 19:03:53.183"></status>
-</kw>
-<status status="PASS" endtime="20180821 19:03:53.964" starttime="20180821 19:03:53.183"></status>
-</kw>
-<kw name="open the first streaming playlist" library="HomeScreen">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>4s</arg>
-</arguments>
-<msg timestamp="20180821 19:03:57.988" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" endtime="20180821 19:03:57.988" starttime="20180821 19:03:53.979"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='0']</arg>
-</arguments>
-<msg timestamp="20180821 19:03:57.988" level="INFO">Clicking element 'xpath=//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='0']'.</msg>
-<status status="PASS" endtime="20180821 19:03:58.519" starttime="20180821 19:03:57.988"></status>
-</kw>
-<status status="PASS" endtime="20180821 19:03:58.519" starttime="20180821 19:03:53.979"></status>
-</kw>
-<kw name="check the text of added song and compare with it" library="HomeScreen">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3s</arg>
-</arguments>
-<msg timestamp="20180821 19:04:01.547" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20180821 19:04:01.547" starttime="20180821 19:03:58.535"></status>
-</kw>
-<kw name="Element Text Should Be" library="AppiumLibrary">
-<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<arguments>
-<arg>xpath=//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']</arg>
-<arg>${songname}</arg>
-</arguments>
-<msg timestamp="20180821 19:04:01.547" level="INFO">Verifying element 'xpath=//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']' contains exactly text 'abc'.</msg>
+<msg timestamp="20180829 15:11:02.967" level="INFO">Verifying element 'com.libraryideas.freegalmusic:id/tvErrorMessage' contains exactly text '*Name cannot be empty.'.</msg>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20180821 19:04:04.448" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20180821 19:04:04.448" starttime="20180821 19:04:01.875"></status>
+<msg timestamp="20180829 15:11:06.178" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180829 15:11:06.178" starttime="20180829 15:11:03.076"></status>
 </kw>
-<msg timestamp="20180821 19:04:04.448" level="FAIL">The text of element 'xpath=//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']' should have been 'abc' but in fact it was 'Just Found Heaven'.</msg>
-<status status="FAIL" endtime="20180821 19:04:04.448" starttime="20180821 19:04:01.547"></status>
+<msg timestamp="20180829 15:11:06.178" level="FAIL">ValueError: Element locator 'com.libraryideas.freegalmusic:id/tvErrorMessage' did not match any elements.</msg>
+<status status="FAIL" endtime="20180829 15:11:06.178" starttime="20180829 15:11:02.967"></status>
 </kw>
-<status status="FAIL" endtime="20180821 19:04:04.448" starttime="20180821 19:03:58.535"></status>
+<status status="FAIL" endtime="20180829 15:11:06.178" starttime="20180829 15:11:02.967"></status>
 </kw>
 <kw type="teardown" name="Logout and close app" library="Common">
 <kw name="tap on settings button" library="LoginScreen">
@@ -455,8 +313,8 @@
 <arguments>
 <arg>3s</arg>
 </arguments>
-<msg timestamp="20180821 19:04:07.460" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20180821 19:04:07.460" starttime="20180821 19:04:04.448"></status>
+<msg timestamp="20180829 15:11:09.179" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180829 15:11:09.179" starttime="20180829 15:11:06.178"></status>
 </kw>
 <kw name="Element Should Be Visible" library="AppiumLibrary">
 <doc>Verifies that element identified with locator is visible.</doc>
@@ -465,27 +323,27 @@
 </arguments>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20180821 19:04:09.747" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20180821 19:04:09.747" starttime="20180821 19:04:07.757"></status>
+<msg timestamp="20180829 15:11:12.426" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180829 15:11:12.426" starttime="20180829 15:11:09.218"></status>
 </kw>
-<msg timestamp="20180821 19:04:09.747" level="FAIL">ValueError: Element locator 'com.libraryideas.freegalmusic:id/ivSettings' did not match any elements.</msg>
-<status status="FAIL" endtime="20180821 19:04:09.747" starttime="20180821 19:04:07.460"></status>
+<msg timestamp="20180829 15:11:12.426" level="FAIL">ValueError: Element locator 'com.libraryideas.freegalmusic:id/ivSettings' did not match any elements.</msg>
+<status status="FAIL" endtime="20180829 15:11:12.426" starttime="20180829 15:11:09.179"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>com.libraryideas.freegalmusic:id/ivSettings</arg>
 </arguments>
-<msg timestamp="20180821 19:04:09.747" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/ivSettings'.</msg>
+<msg timestamp="20180829 15:11:12.442" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/ivSettings'.</msg>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20180821 19:04:12.392" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-4.png"&gt;&lt;img src="appium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20180821 19:04:12.392" starttime="20180821 19:04:09.842"></status>
+<msg timestamp="20180829 15:11:15.464" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-4.png"&gt;&lt;img src="appium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180829 15:11:15.464" starttime="20180829 15:11:12.473"></status>
 </kw>
-<msg timestamp="20180821 19:04:12.392" level="FAIL">ValueError: Element locator 'com.libraryideas.freegalmusic:id/ivSettings' did not match any elements.</msg>
-<status status="FAIL" endtime="20180821 19:04:12.392" starttime="20180821 19:04:09.747"></status>
+<msg timestamp="20180829 15:11:15.464" level="FAIL">ValueError: Element locator 'com.libraryideas.freegalmusic:id/ivSettings' did not match any elements.</msg>
+<status status="FAIL" endtime="20180829 15:11:15.464" starttime="20180829 15:11:12.442"></status>
 </kw>
-<status status="FAIL" endtime="20180821 19:04:12.392" starttime="20180821 19:04:04.448"></status>
+<status status="FAIL" endtime="20180829 15:11:15.464" starttime="20180829 15:11:06.178"></status>
 </kw>
 <kw name="tap on logout button" library="LoginScreen">
 <kw name="Sleep" library="BuiltIn">
@@ -493,8 +351,8 @@
 <arguments>
 <arg>7s</arg>
 </arguments>
-<msg timestamp="20180821 19:04:19.405" level="INFO">Slept 7 seconds</msg>
-<status status="PASS" endtime="20180821 19:04:19.405" starttime="20180821 19:04:12.392"></status>
+<msg timestamp="20180829 15:11:22.476" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" endtime="20180829 15:11:22.476" starttime="20180829 15:11:15.464"></status>
 </kw>
 <kw name="Swipe By Percent" library="AppiumLibrary">
 <doc>Swipe from one percent of the screen to another percent, for an optional duration. </doc>
@@ -505,32 +363,32 @@
 <arg>20</arg>
 <arg>1000</arg>
 </arguments>
-<status status="PASS" endtime="20180821 19:04:20.093" starttime="20180821 19:04:19.405"></status>
+<status status="PASS" endtime="20180829 15:11:23.008" starttime="20180829 15:11:22.476"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>com.libraryideas.freegalmusic:id/tvLogout</arg>
 </arguments>
-<msg timestamp="20180821 19:04:20.093" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/tvLogout'.</msg>
+<msg timestamp="20180829 15:11:23.008" level="INFO">Clicking element 'com.libraryideas.freegalmusic:id/tvLogout'.</msg>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20180821 19:04:23.491" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-5.png"&gt;&lt;img src="appium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20180821 19:04:23.491" starttime="20180821 19:04:21.093"></status>
+<msg timestamp="20180829 15:11:26.571" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-5.png"&gt;&lt;img src="appium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180829 15:11:26.571" starttime="20180829 15:11:23.555"></status>
 </kw>
-<msg timestamp="20180821 19:04:23.491" level="FAIL">ValueError: Element locator 'com.libraryideas.freegalmusic:id/tvLogout' did not match any elements.</msg>
-<status status="FAIL" endtime="20180821 19:04:23.491" starttime="20180821 19:04:20.093"></status>
+<msg timestamp="20180829 15:11:26.571" level="FAIL">ValueError: Element locator 'com.libraryideas.freegalmusic:id/tvLogout' did not match any elements.</msg>
+<status status="FAIL" endtime="20180829 15:11:26.571" starttime="20180829 15:11:23.008"></status>
 </kw>
-<status status="FAIL" endtime="20180821 19:04:23.491" starttime="20180821 19:04:12.392"></status>
+<status status="FAIL" endtime="20180829 15:11:26.571" starttime="20180829 15:11:15.464"></status>
 </kw>
 <kw name="Close app1" library="Common">
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" endtime="20180821 19:04:24.905" starttime="20180821 19:04:23.491"></status>
+<status status="PASS" endtime="20180829 15:11:28.444" starttime="20180829 15:11:26.571"></status>
 </kw>
-<status status="PASS" endtime="20180821 19:04:24.905" starttime="20180821 19:04:23.491"></status>
+<status status="PASS" endtime="20180829 15:11:28.444" starttime="20180829 15:11:26.571"></status>
 </kw>
-<status status="FAIL" endtime="20180821 19:04:24.920" starttime="20180821 19:04:04.448">Several failures occurred:
+<status status="FAIL" endtime="20180829 15:11:28.444" starttime="20180829 15:11:06.178">Several failures occurred:
 
 1) ValueError: Element locator 'com.libraryideas.freegalmusic:id/ivSettings' did not match any elements.
 
@@ -538,11 +396,11 @@
 
 3) ValueError: Element locator 'com.libraryideas.freegalmusic:id/tvLogout' did not match any elements.</status>
 </kw>
-<doc>This test is to verify when shuffle is ON user stream the list any song get played</doc>
+<doc>This test is to verfiy the my music playlist section</doc>
 <tags>
-<tag>Smoke</tag>
+<tag>smoke</tag>
 </tags>
-<status status="FAIL" endtime="20180821 19:04:24.920" critical="yes" starttime="20180821 19:02:00.881">The text of element 'xpath=//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']' should have been 'abc' but in fact it was 'Just Found Heaven'.
+<status status="FAIL" endtime="20180829 15:11:28.444" critical="yes" starttime="20180829 15:09:26.172">ValueError: Element locator 'com.libraryideas.freegalmusic:id/tvErrorMessage' did not match any elements.
 
 Also teardown failed:
 Several failures occurred:
@@ -554,7 +412,7 @@ Several failures occurred:
 3) ValueError: Element locator 'com.libraryideas.freegalmusic:id/tvLogout' did not match any elements.</status>
 </test>
 <doc>This is the test site for Login into the app</doc>
-<status status="FAIL" endtime="20180821 19:04:24.936" starttime="20180821 19:02:00.117"></status>
+<status status="FAIL" endtime="20180829 15:11:28.444" starttime="20180829 15:09:25.202"></status>
 </suite>
 <statistics>
 <total>
@@ -562,12 +420,24 @@ Several failures occurred:
 <stat fail="1" pass="0">All Tests</stat>
 </total>
 <tag>
-<stat fail="1" pass="0">Smoke</stat>
+<stat fail="1" pass="0">smoke</stat>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Browse" pass="0">Browse</stat>
+<stat fail="1" id="s1" name="MyMusic" pass="0">MyMusic</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20180829 15:09:26.140" level="ERROR">Error in file 'C:\Mobile\robot-scripts\Freegal\Resources\Common.robot': Importing test library 'Request' failed: ImportError: No module named Request
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Windows\system32\python27.zip
+  c:\python27\DLLs
+  c:\python27\lib
+  c:\python27\lib\plat-win
+  c:\python27\lib\lib-tk
+  c:\python27
+  C:\Users\pratik.dosi\AppData\Roaming\Python\Python27\site-packages
+  c:\python27\lib\site-packages</msg>
 </errors>
 </robot>

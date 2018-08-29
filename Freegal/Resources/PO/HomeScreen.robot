@@ -23,7 +23,7 @@ ${i}        1
 
 *** Keywords ***
 
-Verify the elements
+Verify the sections available
     #wait until element is visible  xpath=//android.widget.TextView[@text='Recently Played']      25s
     element name should be      xpath=//android.widget.TextView[@text='Recently Played']      Recently Played
     element name should be      xpath=//android.widget.TextView[@text='Featured Playlists']      Featured Playlists
@@ -50,12 +50,12 @@ navigates to the Home> recently played screen
     element should be visible       xpath=//android.widget.TextView[@text='Recently Played']
     sleep   5s
 
-get the text of featured playlist
+get the text of second item of featured playlist
     ${NameOfPlaylist}       get element attribute       xpath=//android.widget.RelativeLayout[@index='1']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.FrameLayout[@index='2']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.RelativeLayout[@index='0']/android.widget.LinearLayout[@index='1']/android.widget.TextView[@index='0']      text
     set global variable         ${NameOfPlaylist}
     log to console      ${NameOfPlaylist}
 
-get the text of featured album playlist
+get the text of third featured album playlist
     ${NAME_OF_ALBUM}       get element attribute       xpath=//android.widget.RelativeLayout[@index='3']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.FrameLayout[@index='2']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.RelativeLayout[@index='2']/android.widget.RelativeLayout[@index='0']/android.widget.LinearLayout[@index='1']/android.widget.TextView[@index='0']      text
     set global variable         ${NAME_OF_ALBUM}
     log to console      ${NAME_OF_ALBUM}
@@ -66,7 +66,7 @@ get the text of featured artist playlist
     log to console      ${NAME_OF_ARTIST}
 
 
-now compare the name on detail screen
+now compare the name of playlist on detail screen
     element text should be          com.libraryideas.freegalmusic:id/tvContentTitle         ${NameOfPlaylist}
 
 now compare the name of album on detail screen
@@ -89,47 +89,21 @@ play a second song of list
 
 
 
-navigates to the detail screen of featured playlist
+navigates to the detail screen of second item in featured playlist section
     sleep   5s
-    #click element       com.libraryideas.freegalmusic:id/featuredPlaylistComponent/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='1']
+    click element       xpath=//android.widget.RelativeLayout[@index='1']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.FrameLayout[@index='2']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.RelativeLayout[@index='0']/android.widget.FrameLayout[@index='0']/android.widget.FrameLayout[@index='0']/android.widget.ImageView[@index='0']
+    sleep   5s
+    #click element       xpath=//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.FrameLayout[1]/android.widget.RelativeLayout/android.support.v4.view.ViewPager/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[2]/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ImageView
 
-    #click element       xpath=//com.libraryideas.freegalmusic:id/featuredPlaylistComponent[1]*[@index='1']
-    #click element       xpath=//com.libraryideas.freegalmusic:id/featuredPlaylistComponent[@index='1']*[@index= '1' ]
-    #click element       xpath=//com.libraryideas.freegalmusic:id/featuredPlaylistComponent[@index='1']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.FrameLayout[@index='2']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.RelativeLayout[@index='1']
-    click element       xpath=//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.FrameLayout[1]/android.widget.RelativeLayout/android.support.v4.view.ViewPager/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[2]/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ImageView
-    #click element       xpath=//com.libraryideas.freegalmusic:id/featuredPlaylistComponent[@index='1']/android.widget.RelativeLayout[@index='0']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.FrameLayout[@index='2']/android.widget.RelativeLayout[@index='1']
-
-navigates to the detail screen of featured album
+navigates to the detail screen of third featured album
     click element       xpath=//android.widget.RelativeLayout[@index='3']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.FrameLayout[@index='2']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.RelativeLayout[@index='2']
-
+    sleep   4s
 navigates to the detail screen of featured artist
     sleep   4s
     click element       xpath=//android.widget.RelativeLayout[@index='7']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.FrameLayout[@index='2']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.RelativeLayout[@index='2']
+    sleep  2s
 
 
-
-scroll to the featured album list
-    scroll the list
-    scroll the list
-
-scroll to the featured songs list
-    scroll the list
-    scroll the list
-    scroll the list
-
-scroll to the featured music videos list
-    scroll the list
-    scroll the list
-    scroll the list
-    scroll the list
-
-scroll to the featured artist list
-    scroll the list
-    scroll the list
-    scroll the list
-    scroll the list
-    scroll the list
-    scroll the list
 
 
 
@@ -153,17 +127,6 @@ Tap on OK button of Limetmet popup
 #    ${i} =      evaluate        ${i}+1
 
 
-scroll the list
-    swipe by percent    70      40      70      4       1000
-    sleep   7s
-
-scroll the list up
-    swipe by percent    70      30      70      80       1000
-    sleep   7s
-
-scroll to the top
-    scroll the list up
-    scroll the list up
 
 select more option of the second song in playlist
     click element       xpath=//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='1']/android.widget.RelativeLayout[@index='0']/android.widget.LinearLayout[@index='2']
@@ -231,8 +194,6 @@ tap on Ok button of song added/remove
     sleep   3s
     click element       com.libraryideas.freegalmusic:id/tvOk
 
-navigates to the back screen
-    click element   com.libraryideas.freegalmusic:id/ibBack
 
 
 
@@ -242,11 +203,9 @@ verify the message when song added successfully in wishlist
 
 
 save text of that song
-    ${songname}     get element attribute       com.libraryideas.freegalmusic:id/tvContentTitle         text
-    set global variable         ${songname}
+    ${SONGNAME}     get element attribute       com.libraryideas.freegalmusic:id/tvContentTitle         text
+    set global variable         ${SONGNAME}
 
-tap on viewwislit button
-    click element       com.libraryideas.freegalmusic:id/tvViewWishlist
 
 
 validate user navigates on right tab in wishlist section
@@ -257,7 +216,7 @@ validate user navigates on right tab in wishlist section
     ${element}     get line count       com.libraryideas.freegalmusic:id/recycler_view
     log to console      ${element}
     #${textofsong}       get element attribute       xpath=//android.support.v7.widget.RecyclerView[@index='2']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']        text
-    #should be equal as strings          ${songname}     ${textofsong}
+    #should be equal as strings          ${SONGNAME}     ${textofsong}
 
 add button chnages into the remove button
     element text should be       com.libraryideas.freegalmusic:id/tvRemove      Remove from Wishlist
@@ -265,7 +224,7 @@ add button chnages into the remove button
 tap on the remove the song from playlist button
     click element       com.libraryideas.freegalmusic:id/tvRemove
 
-read the name of the adding song
+get the name of the adding song
     ${SONG_NAME}         get element attribute       com.libraryideas.freegalmusic:id/tvContentTitle         text
     log to console          ${SONG_NAME}
     set global variable     ${SONG_NAME}
@@ -299,10 +258,11 @@ validate user lands to the playlist screen
 open the first streaming playlist
     sleep   4s
     click element       xpath=//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='0']
+    sleep   3s
 
 check the text of added song and compare with it
     sleep   3s
-    element text should be      xpath=//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']        ${songname}
+    element text should be      xpath=//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']        ${SONGNAME}
 
 tap on the downlaod button
     click element           com.libraryideas.freegalmusic:id/tvDownload
@@ -326,11 +286,7 @@ verify the message of successfully download
     element text should be          com.libraryideas.freegalmusic:id/tvDownloadSuccess          Successfully Downloaded
 
 
-tap on shuffle button
-    click element       com.libraryideas.freegalmusic:id/tvShuffle
 
-tap on the stream button
-    click element       com.libraryideas.freegalmusic:id/btnStream
 
 check the name of first song
     ${firstsonginplaylist}      get element attribute          xpath=//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='0']        text
@@ -338,8 +294,9 @@ check the name of first song
     set global variable         ${firstsonginplaylist}
 
 
-check the name of the song played on music player be same
-    element text should be       xpath=//android.widget.FrameLayout[@index='1']/android.widget.FrameLayout[@index='0']/android.widget.FrameLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.LinearLayout[@index='2']/android.widget.TextView[@index='0']         ${firstsonginplaylist}
+#check the name of the song played on music player be same
+#    sleep   4s
+#    element text should be       xpath=//android.widget.FrameLayout[@index='1']/android.widget.FrameLayout[@index='0']/android.widget.FrameLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.LinearLayout[@index='2']/android.widget.TextView[@index='0']         ${firstsonginplaylist}
 
 check the name of the song played on music player be different
     element should not contain text         xpath=//android.widget.FrameLayout[@index='1']/android.widget.FrameLayout[@index='0']/android.widget.FrameLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.LinearLayout[@index='2']/android.widget.TextView[@index='0']         ${firstsonginplaylist}
@@ -350,7 +307,8 @@ check the name of song and play it from featured song
     set global variable         ${SONG_PLAYED_FEATUREDSONGS}
     click element       xpath=//android.widget.RelativeLayout[@index='4']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.FrameLayout[@index='2']/android.support.v7.widget.RecyclerView[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.LinearLayout[@index='1']/android.widget.TextView[@index='0']
 
-check the name of the song played on music player be same as featured album
+check the name of the song played on music player be same
+    sleep   4s
     element text should be       xpath=//android.widget.FrameLayout[@index='1']/android.widget.FrameLayout[@index='0']/android.widget.FrameLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.RelativeLayout[@index='0']/android.widget.LinearLayout[@index='2']/android.widget.TextView[@index='0']         ${SONG_PLAYED_FEATUREDSONGS}
 
 check the name of 3rd song and play it from featured song

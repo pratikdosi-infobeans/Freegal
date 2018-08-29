@@ -22,20 +22,18 @@ ${SongAvailable}        xpath=//''
 navigates to the my music screen
     sleep   3s
     click element       xpath=//android.widget.TextView[@text='My Music']
-    sleep   5s
-    #click element       xpath=//android.widget.FrameLayout[@index= '3']
-    #sleep   7s
     wait until element is visible   xpath=//android.widget.TextView[@text='My Music']
 
-verify the different tabsa vailable on mymusic screen
+verify the different tabs available on mymusic screen
     element name should be      xpath=//android.widget.TextView[@text='Playlists']      Playlists
     element name should be      xpath=//android.widget.TextView[@text='MUSIC VIDEOS']      MUSIC VIDEOS
     element name should be      xpath=//android.widget.TextView[@text='Audiobooks']      Audiobooks
     element name should be      xpath=//android.widget.TextView[@text='Songs']      Songs
 
 
-navigates to the Mymusci> playlist section
+navigates to the Mymusic> playlist section
     click element   xpath=//android.widget.TextView[@text='Playlists']
+    wait until page contains element  xpath=//android.widget.TextView[@text='Playlists']
     sleep  10s
 
 
@@ -75,6 +73,7 @@ tap on the create playlist button
 
 tap on the my streaming playlist button
     click element   com.libraryideas.freegalmusic:id/tvStreamingPlaylist
+    sleep   2s
 
 
 
@@ -168,7 +167,7 @@ Select more option of the first download playlist in list
 
 
 
-Cancel the popup screen of more streaming playlist option
+Cancel the popup screen of more option
     click element       com.libraryideas.freegalmusic:id/ivCancel
 
 tap on the 'add music' button

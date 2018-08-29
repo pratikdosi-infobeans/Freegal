@@ -1,6 +1,7 @@
 *** Settings ***
 Library  AppiumLibrary
 Library  String
+Library  Request
 Resource    ../Resources/PO/MyMusicScreen.robot
 Resource   ../Resources/PO/LoginScreen.robot
 Resource    ../Resources/BasicApp.robot
